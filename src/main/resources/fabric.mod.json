@@ -20,6 +20,9 @@
 		],
 		"client": [
 			"net.skye.exp.SkyeExperimentModClient"
+		],
+		"fabric-datagen": [
+			"net.skye.exp.datagen.SkyeExperimentModDataGenerator"
 		]
 	},
 	"mixins": [

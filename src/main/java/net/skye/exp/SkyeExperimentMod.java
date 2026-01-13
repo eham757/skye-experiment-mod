@@ -21,5 +21,8 @@ public class SkyeExperimentMod implements ModInitializer {
 
 		LOGGER.info("Hello Fabric world!");
 		ModItems.initialize(); //apparently this forces it to load the items
+
+		LOGGER.info("Hello");
+		ModBlocks.initialize();
 	}
 }
