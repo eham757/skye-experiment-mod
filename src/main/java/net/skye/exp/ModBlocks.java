@@ -12,6 +12,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.material.MapColor;
 
 import java.util.function.Function;
 
@@ -23,9 +25,30 @@ public class ModBlocks {
             true
     );
 
+    public static final Block RUBY_ORE = register(
+            "ruby_ore",
+            Block::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(3.0F, 3.0F),
+            true
+    );
+
+    public static final Block RUBY_BLOCK = register(
+            "ruby_block",
+            Block::new,
+            BlockBehaviour.Properties.of()			.instrument(NoteBlockInstrument.BIT)
+                    .requiresCorrectToolForDrops()
+                    .strength(5.0F, 6.0F)
+                    .sound(SoundType.METAL),
+            true
+    );
+
     public static void initialize() {
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register((itemGroup) -> {
             itemGroup.accept(ModBlocks.CONDENSED_DIRT.asItem());
+            itemGroup.accept(ModBlocks.RUBY_BLOCK.asItem());
+        });
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.NATURAL_BLOCKS).register((itemGroup) -> {
+            itemGroup.accept(ModBlocks.RUBY_ORE.asItem());
         });
     }
 

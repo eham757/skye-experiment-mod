@@ -3,6 +3,8 @@ package net.skye.exp.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.core.HolderLookup;
+import net.skye.exp.ModBlocks;
+import net.skye.exp.ModItems;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -13,6 +15,14 @@ public class SkyeExperimentModEnglishLangProvider extends FabricLanguageProvider
 
     @Override
     public void generateTranslations(HolderLookup.Provider provider, TranslationBuilder translationBuilder) {
+        // Items
+        translationBuilder.add(ModItems.SUSPICIOUS_SUBSTANCE, "Suspicious Substance");
+        translationBuilder.add(ModItems.RUBY, "Ruby");
+
+        // Blocks
+        translationBuilder.add(ModBlocks.CONDENSED_DIRT, "Condensed Dirt");
+        translationBuilder.add(ModBlocks.RUBY_BLOCK, "Block of Ruby");
+        translationBuilder.add(ModBlocks.RUBY_ORE, "Ruby Ore");
 
     }
 }
