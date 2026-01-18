@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.skye.exp.ModBlocks;
+import org.jspecify.annotations.NonNull;
 
 public class SkyeExperimentModModelProvider extends FabricModelProvider {
 
@@ -31,7 +32,7 @@ public class SkyeExperimentModModelProvider extends FabricModelProvider {
     }
 
     @Override
-    public String getName(){
+    public @NonNull String getName(){
         return "SkyeExperimentModModelProvider";
     }
 }

@@ -53,12 +53,12 @@ public class ModBlocks {
     }
 
     private static Block register(String name, Function<BlockBehaviour.Properties, Block> blockFactory, BlockBehaviour.Properties settings, boolean shouldRegisterItem){
-        ResourceKey<Block> blockKey = keyofBlock(name);
+        ResourceKey<Block> blockKey = keyOfBlock(name);
 
         Block block = blockFactory.apply(settings.setId(blockKey));
 
         if (shouldRegisterItem) {
-            ResourceKey<Item> itemKey = keyofItem(name);
+            ResourceKey<Item> itemKey = keyOfItem(name);
 
             BlockItem blockItem = new  BlockItem(block, new Item.Properties().setId(itemKey).useBlockDescriptionPrefix());
             Registry.register(BuiltInRegistries.ITEM, itemKey, blockItem);
@@ -67,11 +67,11 @@ public class ModBlocks {
         return Registry.register(BuiltInRegistries.BLOCK, blockKey, block);
     }
 
-    private static ResourceKey<Block> keyofBlock(String name){
+    private static ResourceKey<Block> keyOfBlock(String name){
         return ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(SkyeExperimentMod.MOD_ID, name));
     }
 
-    private static ResourceKey<Item> keyofItem(String name){
+    private static ResourceKey<Item> keyOfItem(String name){
         return ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(SkyeExperimentMod.MOD_ID, name));
     }
 }
