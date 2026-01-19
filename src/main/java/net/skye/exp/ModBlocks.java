@@ -32,6 +32,13 @@ public class ModBlocks {
             true
     );
 
+    public static final Block DEEPSLATE_RUBY_ORE = register(
+            "deepslate_ruby_ore",
+            Block::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.DEEPSLATE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(4.5F, 3.0F).sound(SoundType.DEEPSLATE),
+            true
+    );
+
     public static final Block RUBY_BLOCK = register(
             "ruby_block",
             Block::new,
@@ -49,6 +56,7 @@ public class ModBlocks {
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.NATURAL_BLOCKS).register((itemGroup) -> {
             itemGroup.accept(ModBlocks.RUBY_ORE.asItem());
+            itemGroup.accept(ModBlocks.DEEPSLATE_RUBY_ORE.asItem());
         });
     }
 

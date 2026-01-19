@@ -18,6 +18,7 @@ public class SkyeExperimentModModelProvider extends FabricModelProvider {
         blockModelGenerators.createTrivialCube(ModBlocks.CONDENSED_DIRT);
         blockModelGenerators.createTrivialCube(ModBlocks.RUBY_BLOCK);
         blockModelGenerators.createTrivialCube(ModBlocks.RUBY_ORE);
+        blockModelGenerators.createTrivialCube(ModBlocks.DEEPSLATE_RUBY_ORE);
     }
 
 //    @Override

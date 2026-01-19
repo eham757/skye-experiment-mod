@@ -23,6 +23,7 @@ public class SkyeExperimentModEnglishLangProvider extends FabricLanguageProvider
         translationBuilder.add(ModBlocks.CONDENSED_DIRT, "Condensed Dirt");
         translationBuilder.add(ModBlocks.RUBY_BLOCK, "Block of Ruby");
         translationBuilder.add(ModBlocks.RUBY_ORE, "Ruby Ore");
+        translationBuilder.add(ModBlocks.DEEPSLATE_RUBY_ORE, "Deepslate Ruby Ore");
 
     }
 }
