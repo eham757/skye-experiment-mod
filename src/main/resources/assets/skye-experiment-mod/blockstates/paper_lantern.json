@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "skye-experiment-mod:block/paper_lantern"
+    },
+    "hanging=true": {
+      "model": "skye-experiment-mod:block/paper_lantern_hanging"
+    }
+  }
+}

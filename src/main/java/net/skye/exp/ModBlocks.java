@@ -10,10 +10,12 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.LanternBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 
 import java.util.function.Function;
 
@@ -42,10 +44,25 @@ public class ModBlocks {
     public static final Block RUBY_BLOCK = register(
             "ruby_block",
             Block::new,
-            BlockBehaviour.Properties.of()			.instrument(NoteBlockInstrument.BIT)
+            BlockBehaviour.Properties.of()
+                    .instrument(NoteBlockInstrument.BIT)
                     .requiresCorrectToolForDrops()
                     .strength(5.0F, 6.0F)
                     .sound(SoundType.METAL),
+            true
+    );
+
+    public static final Block PAPER_LANTERN = register(
+            "paper_lantern",
+            LanternBlock::new,
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.METAL)
+                    .forceSolidOn()
+                    .strength(3.5F)
+                    .sound(SoundType.LANTERN)
+                    .lightLevel(blockStatex -> 15)
+                    .noOcclusion()
+                    .pushReaction(PushReaction.DESTROY),
             true
     );
 
@@ -53,6 +70,7 @@ public class ModBlocks {
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register((itemGroup) -> {
             itemGroup.accept(ModBlocks.CONDENSED_DIRT.asItem());
             itemGroup.accept(ModBlocks.RUBY_BLOCK.asItem());
+            itemGroup.accept(ModBlocks.PAPER_LANTERN.asItem());
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.NATURAL_BLOCKS).register((itemGroup) -> {
             itemGroup.accept(ModBlocks.RUBY_ORE.asItem());

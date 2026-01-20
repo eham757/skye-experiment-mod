@@ -25,5 +25,7 @@ public class SkyeExperimentModEnglishLangProvider extends FabricLanguageProvider
         translationBuilder.add(ModBlocks.RUBY_ORE, "Ruby Ore");
         translationBuilder.add(ModBlocks.DEEPSLATE_RUBY_ORE, "Deepslate Ruby Ore");
 
+        translationBuilder.add(ModBlocks.PAPER_LANTERN, "Paper Lantern");
+
     }
 }

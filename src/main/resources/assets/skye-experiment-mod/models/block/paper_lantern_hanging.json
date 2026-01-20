@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_hanging_lantern",
+  "textures": {
+    "lantern": "skye-experiment-mod:block/paper_lantern"
+  }
+}
