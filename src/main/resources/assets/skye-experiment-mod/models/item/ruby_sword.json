@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "skye-experiment-mod:item/ruby_sword"
+  }
+}

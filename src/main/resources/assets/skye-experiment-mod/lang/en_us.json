@@ -5,5 +5,10 @@
   "block.skye-experiment-mod.ruby_block": "Block of Ruby",
   "block.skye-experiment-mod.ruby_ore": "Ruby Ore",
   "item.skye-experiment-mod.ruby": "Ruby",
+  "item.skye-experiment-mod.ruby_axe": "Ruby Axe",
+  "item.skye-experiment-mod.ruby_hoe": "Ruby Hoe",
+  "item.skye-experiment-mod.ruby_pickaxe": "Ruby Pickaxe",
+  "item.skye-experiment-mod.ruby_shovel": "Ruby Shovel",
+  "item.skye-experiment-mod.ruby_sword": "Ruby Sword",
   "item.skye-experiment-mod.suspicious_substance": "Suspicious Substance"
 }

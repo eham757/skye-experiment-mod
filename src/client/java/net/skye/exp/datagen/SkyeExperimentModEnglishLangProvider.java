@@ -18,6 +18,11 @@ public class SkyeExperimentModEnglishLangProvider extends FabricLanguageProvider
         // Items
         translationBuilder.add(ModItems.SUSPICIOUS_SUBSTANCE, "Suspicious Substance");
         translationBuilder.add(ModItems.RUBY, "Ruby");
+        translationBuilder.add(ModItems.RUBY_PICKAXE, "Ruby Pickaxe");
+        translationBuilder.add(ModItems.RUBY_AXE, "Ruby Axe");
+        translationBuilder.add(ModItems.RUBY_SHOVEL, "Ruby Shovel");
+        translationBuilder.add(ModItems.RUBY_SWORD, "Ruby Sword");
+        translationBuilder.add(ModItems.RUBY_HOE, "Ruby Hoe");
 
         // Blocks
         translationBuilder.add(ModBlocks.CONDENSED_DIRT, "Condensed Dirt");
