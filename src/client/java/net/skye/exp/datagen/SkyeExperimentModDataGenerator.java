@@ -9,5 +9,8 @@ public class SkyeExperimentModDataGenerator implements DataGeneratorEntrypoint {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
         pack.addProvider(SkyeExperimentModEnglishLangProvider::new);
         pack.addProvider(SkyeExperimentModModelProvider::new);
+        pack.addProvider(SkyeExperimentModRecipeProvider::new);
+        pack.addProvider(SkyeExperimentModBlockLootTableProvider::new);
+        pack.addProvider(SkyeExperimentModBlockTagProvider::new);
     }
 }

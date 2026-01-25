@@ -5,7 +5,6 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.model.ModelTemplates;
-import net.minecraft.world.item.MaceItem;
 import net.skye.exp.ModBlocks;
 import net.skye.exp.ModItems;
 import org.jspecify.annotations.NonNull;
