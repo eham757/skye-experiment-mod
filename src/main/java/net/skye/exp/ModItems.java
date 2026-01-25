@@ -16,11 +16,15 @@ public class ModItems {
 
     public static final Item RUBY = register("ruby", Item::new, new Item.Properties());
 
+    public static final Item RUBY_PICKAXE = register("ruby_pickaxe", Item::new, new Item.Properties().pickaxe(ModMaterials.RUBY_TOOL_MATERIAL, 5.0f, 10.0f));
+
     public static void initialize() {
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.INGREDIENTS)
                 .register((itemGroup) -> itemGroup.accept(ModItems.SUSPICIOUS_SUBSTANCE));
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.INGREDIENTS)
                 .register((itemGroup) -> itemGroup.accept(ModItems.RUBY));
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES)
+                .register((itemGroup) -> itemGroup.accept(ModItems.RUBY_PICKAXE));
     }
 
     public static <GenericItem extends Item> GenericItem register (String name, Function<Item.Properties, GenericItem> itemFactory, Item.Properties settings){

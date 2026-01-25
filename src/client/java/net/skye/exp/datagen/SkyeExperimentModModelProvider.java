@@ -4,7 +4,10 @@ import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
+import net.minecraft.client.data.models.model.ModelTemplates;
+import net.minecraft.world.item.MaceItem;
 import net.skye.exp.ModBlocks;
+import net.skye.exp.ModItems;
 import org.jspecify.annotations.NonNull;
 
 public class SkyeExperimentModModelProvider extends FabricModelProvider {
@@ -23,15 +26,11 @@ public class SkyeExperimentModModelProvider extends FabricModelProvider {
         blockModelGenerators.createLantern(ModBlocks.PAPER_LANTERN);
     }
 
-//    @Override
-//    public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-//        blockStateModelGenerator.createTrivialCube(ModBlocks.CONDENSED_DIRT);
-//    }
-
-
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerators) {
-
+        itemModelGenerators.generateFlatItem(ModItems.RUBY, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.SUSPICIOUS_SUBSTANCE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.RUBY_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
     }
 
     @Override
